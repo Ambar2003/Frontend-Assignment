@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  .custom-underline {
+      position: relative;
+      display: inline-block;
+    }
+    .custom-underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px; /* Adjust this value to change the distance */
+      height: 1px;  /* Adjust this value to change the thickness */
+      background-color: currentColor; /* Use the current text color */
+    }
+    .custom-hover-underline {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .custom-hover-underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px; /* Adjust this value to change the distance */
+      height: 1px;  /* Adjust this value to change the thickness */
+      background-color: currentColor; /* Use the current text color */
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    
+    .custom-hover-underline:hover::after {
+      opacity: 1;
+    }
